@@ -14,9 +14,11 @@ class ExceptionLauncher extends atoum\test
 {
     public function testLaunchException ()
     {
-        $exception = new ExceptionLauncher();
+        $exception = new \ExceptionLauncher();
         $this->assert
-                 ->exception(function()use($exception){$exception->launchException();})
+                 ->exception(function()use($exception){
+                                $exception->launchException();
+                            })
                  ->isInstanceOf('LaunchedException')
                  ->hasMessage('Message in the exception');
     }

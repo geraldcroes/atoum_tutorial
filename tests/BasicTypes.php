@@ -16,7 +16,7 @@ use \mageekguy\atoum;
  */
 class BasicTypes extends atoum\test
 {
-    public function testBooleans ()
+    public function testBoolean ()
     {
         $bt = new \BasicTypes();
         $this->assert
@@ -35,7 +35,7 @@ class BasicTypes extends atoum\test
                 ->isGreaterThan(0);
     }
 
-    public function testHello()
+    public function testString()
     {
         $bt = new \BasicTypes();
         $this->assert
@@ -44,7 +44,7 @@ class BasicTypes extends atoum\test
                 ->isEqualTo('hello');
     }
 
-    public function testCreateSelf ()
+    public function testObject ()
     {
         $bt = new \BasicTypes();
         $this->assert
@@ -53,7 +53,7 @@ class BasicTypes extends atoum\test
                 ->isNotIdenticalTo($bt);//Une nouvelle instance
     }
 
-    public function testGetFloat()
+    public function testFloat()
     {
         $bt = new \BasicTypes();
         $this->assert
